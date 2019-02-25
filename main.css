@@ -23,7 +23,7 @@ img{
 max-width: 100%;
 }
 body{
-color: var(--gray);
+color: var(--dark-gray);
 font-family:var(--ff-s);
 line-height: 1.6;
 background:var(--white);
