@@ -1,6 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Merriweather:400,900|Six+Caps');
-@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
 @import url('https://fonts.googleapis.com/css?family=Montserrat:300');
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+@import url('https://fonts.googleapis.com/css?family=Cinzel+Decorative');
+
 
 :root {
   --white: #FFFFFF;
@@ -10,8 +11,8 @@
   --accent: #03AFC2;
   --dark-blue: #223843;
   --ff-s: 'Montserrat', sans-serif;
-  --ff-ss: 'Ubuntu Condensed', sans-serif;
-  --ff-sss: 'Six Caps', sans-serif;
+  --ff-ss: 'Poppins', sans-serif;
+  --ff-sss: 'Cinzel Decorative', cursive;
   --fw-n: 400;
   --fw-b: 900;
 }
@@ -30,7 +31,7 @@ body {
   color: var(--dark-gray);
   font-family: var(--ff-s);
   line-height: 1.6;
-  background: var(--white);
+  background:#223843;
 }
 
 h1 {
@@ -43,13 +44,13 @@ h1 span {
   color: var(--accent);
   font-family: var(--ff-ss);
   display: block;
-  font-size: 5.5rem;
+  font-size: 2.5rem;
   letter-spacing: 0.8rem;
   font-family: var(--ff-sss);
 }
 
 h2 {
-  font-family: var(--ff-ss);
+  font-family: var(--ff-s);
   font-size: 2rem;
   letter-spacing: 10px;
   color: var(--dark-gray);
@@ -79,6 +80,9 @@ h5 {
   line-height: 1;
   margin-top: 0;
   margin-bottom: 1em;
+}
+p{
+  color: var(--white);
 }
 
 
@@ -147,12 +151,12 @@ h5 {
 
 .about-subtitle {
   margin: .2em 0;
+  color: var(--white);
 }
 
 #myWork {
   margin-top: 5em;
   margin-bottom: 10em;
-  background: #223843;
   background-size: cover;
   background-position: center;  
   align-items: center;
@@ -168,7 +172,11 @@ h5 {
   background: #333;
   color: #fff;
   padding: 0.4rem 1.3rem;
-  border: 0;
+  border-radius: 10px;
+}
+.btn:hover{
+  background: var(--light-gray);
+  color: black;
 }
 
 .btn2 {
@@ -196,15 +204,12 @@ textarea {
   padding: 1em;
   width: 50%;
   background: var(--light-gray);
-  border: 1px var(--gray);
+  border: none;
   font-size: 1.2rem;
 
 }
-
-label {
-  display: block;
-  margin-top: 1em;
-  color: var(--dark-gray);
+#name,#email,#msg{
+  border-radius: 20px;
 }
 
 .btn3 {
@@ -213,15 +218,17 @@ label {
   margin-top: 1em;
   background: var(--accent);
   color: var(--white);
+  border-radius: 20px;
 }
 
 .btn3:hover {
   background: var(--dark-gray);
   color: var(--accent);
+  cursor: pointer;
 }
 
 footer {
-  background: var(--dark-blue);
+  background: #101010;
   padding: 3em 0;
   text-align: center;
 }
