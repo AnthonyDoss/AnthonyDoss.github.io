@@ -30,14 +30,14 @@ copyrights Anthonydoss.
     </div>
     <!--NavBar-->
     <div id="navbar">
-        <a href="#home"><span onclick="openNav()" class="menu"><i class="fas fa-bars fa-2x"></i></span></a>
+        <a href="#home"><span onclick="navHandler()" class="menu"><i class="fas fa-bars fa-2x"></i></span></a>
      </div>
     <!--SideBar-->
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="#aboutme">About</a>
         <a href="#mywork">Work</a>
-        <a href="#contact" scrollTo="contact">Contact</a>
+        <a href="#contact">Contact</a>
       </div>
     <!--About me-->
     <section class="about_me" id="aboutme">
@@ -56,7 +56,8 @@ copyrights Anthonydoss.
                 in technical writing and oral presentation, with adeptness in
                 systematically gathering and evaluating pertinent information to adapt
                 new equipment and technologies. Articulate communicator, with
-                multilingual fluency in English and Arabic.</p>
+                multilingual fluency in English and Arabic.
+            </p>
         </div>
     </section>
          <!--My Experience Section-->
@@ -125,13 +126,14 @@ copyrights Anthonydoss.
     <center>
         <!--Form Section-->
     <section class="contact" id="contact">
-        <h1>Get in Touch</h1>
-        <form action="" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal ">
+        <h1>Projects</h1>
+        <!-- <form action="" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal ">
             <input type="text" id="name" placeholder="Name:"><br>
             <input type="email" id="email" placeholder="Email:"><br>
             <textarea id="msg" placeholder="Message..."></textarea>
             <input type="submit" value="Send" class="btn3">
-        </form>
+        </form> -->
+
     </section></center>
     <!--Footer-->
     <footer>
@@ -146,12 +148,22 @@ copyrights Anthonydoss.
 <script src="https://anijs.github.io/lib/anijs/helpers/scrollreveal/anijs-helper-scrollreveal.js"></script>
 <!--Navbar js-->
 <script>
+ //sideNav open function 
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
 }
+//sideNav close function 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
 }
+//sideNav Handler function 
+function navHandler(){
+    if (document.getElementById("mySidenav").style.width == "250px"){
+      closeNav();
+    }
+    else openNav();
+  }
+//scroll handler for burger menu icon
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
 var currentScrollPos = window.pageYOffset;
