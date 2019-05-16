@@ -30,14 +30,13 @@ copyrights Anthonydoss.
     </div>
     <!--NavBar-->
     <div id="navbar">
-        <a href="#home"><span onclick="navHandler()" class="menu"><i class="fas fa-bars fa-2x"></i></span></a>
+        <a href="#home"><span onclick="navHandler()" class="menu"><i id="brgMenu" class="fas fa-bars fa-2x" style="color:#D5DBD8"></i></span></a>
      </div>
     <!--SideBar-->
     <div id="mySidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
         <a href="#aboutme">About</a>
         <a href="#mywork">Work</a>
-        <a href="#contact">Contact</a>
+        <a href="#projects">Projects</a>
       </div>
     <!--About me-->
     <section class="about_me" id="aboutme">
@@ -63,8 +62,8 @@ copyrights Anthonydoss.
          <!--My Experience Section-->
     <section class="section-padding" id="mywork">
         <h1 class="exp-title">My Experience</h1>
-        <div class="tile sis-ancestor">
-                <div class="tile is-4 is-vertical is-parent">
+        <div class="columns is-centered">
+                <div class="tile is-3 is-vertical is-parent">
                   <div class="tile is-child box" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal">
                     <p class="title"><h2><i class="fas fa-graduation-cap"></i>Education</h2></p>
                     <p> 
@@ -83,11 +82,11 @@ copyrights Anthonydoss.
                   <div class="tile is-child box" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal ">
                     <p class="title"><h2><i class="fas fa-code"></i>Skills</h2></p>
                     <p><div>
-                            <p class="btn2">Java</p>
+                            <p class="btn2"> Java</p>
                             <p class="btn2">JavaScript</p>
-                            <p class="btn2">Windows 10, MacOS, Linux/Unix</p>
+                            <p class="btn2">Windows 10, Linux/Unix</p>
                             <p class="btn2">HTML/CSS</p>
-                            <p class="btn2">PHP</p>
+                            <p class="btn2"></i>PHP</p>
                             <p class="btn2">MySQL</p>
                             <p class="btn2">Microsoft Office Suite</p>
                             <p class="btn2">GNS3</p>
@@ -95,9 +94,9 @@ copyrights Anthonydoss.
                         </div></p>
                   </div>
                 </div>
-                <div class="tile is-parent" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal ">
+                <div class="tile is-parent is-6" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal ">
                   <div class="tile is-child box">
-                    <p class="title"><h2>Resume</h2></p>
+                    <p class="title"></p><h2><i class="fas fa-briefcase"></i>Work</h2></p>
                     <p></p>
                     <div class="content">
                             <h3 class="is-size-5">Problem Solver – Amazon Fulfilment Center (2017-2018)</h3>
@@ -123,17 +122,55 @@ copyrights Anthonydoss.
                 </div>
               </div>
     </section>
-    <center>
-        <!--Form Section-->
-    <section class="contact" id="contact">
+    
+        <!--Project Section-->
+        <center>
+    <section class="projects" id="projects">
         <h1>Projects</h1>
-        <!-- <form action="" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal ">
-            <input type="text" id="name" placeholder="Name:"><br>
-            <input type="email" id="email" placeholder="Email:"><br>
-            <textarea id="msg" placeholder="Message..."></textarea>
-            <input type="submit" value="Send" class="btn3">
-        </form> -->
-
+        <div class="tile is-9">
+          <div class="tile is-parent" id="proj1">
+              <div class="tile is-child box">
+                 <h2>StoreBolt</h2>
+                 <p><a href="https://github.com/AnthonyDoss" target="_blank"><i class="fab fa-github  fa-2x"></i></a><a href="https://github.com/AnthonyDoss" target="_blank"><i class="fas fa-external-link-alt  fa-2x"></i></a><p>
+                 <h3>Java FXML application ,designed to allow users to pay for items they are going to purchase via the app. 
+                   This eliminates the need to stand in line to purchase items and helps reduce time for the consumer.</h3><br>
+                   <p class="btn2"> Java</p>
+                   <p class="btn2"> Java FXML</p>
+              </div>
+          </div>
+          <div class="tile is-parent"  id="proj1">
+              <div class="tile is-child box">
+                <h2>Coming Soon</h2>
+                <h3></h3>
+              </div>
+          </div>
+          <div class="tile is-parent"  id="proj1">
+              <div class="tile is-child box">
+                  <h2>Coming Soon</h2>
+                  <h3></h3>
+              </div>
+          </div>
+      </div>
+      <div class="tile is-9">
+        <div class="tile is-parent"  id="proj1">
+            <div class="tile is-child box">
+                <h2>Coming Soon</h2>
+                <h3></h3>
+            </div>
+        </div>
+        <div class="tile is-parent"  id="proj1">
+            <div class="tile is-child box">
+                <h2>Coming Soon</h2>
+                <h3></h3>
+            </div>
+        </div>
+        <div class="tile is-parent"  id="proj1">
+            <div class="tile is-child box">
+                <h2>Coming Soon</h2>
+                <h3></h3>
+            </div>
+        </div>
+    </div>
     </section></center>
     <!--Footer-->
     <footer>
@@ -143,6 +180,7 @@ copyrights Anthonydoss.
             <p>Copyright 2019 Anthony Doss Portfolio &copy;</p>
             <p>Email:  dossan@sheridancollege.ca</p>
     </footer>
+
   <!--Anijs for animation -->
 <script src="https://anijs.github.io/lib/anijs/anijs.js"></script>
 <script src="https://anijs.github.io/lib/anijs/helpers/scrollreveal/anijs-helper-scrollreveal.js"></script>
@@ -155,6 +193,7 @@ function openNav() {
 //sideNav close function 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
+  
 }
 //sideNav Handler function 
 function navHandler(){
@@ -162,6 +201,7 @@ function navHandler(){
       closeNav();
     }
     else openNav();
+    document.getElementById("brgMenu").classList.toggle('fa-times')
   }
 //scroll handler for burger menu icon
 var prevScrollpos = window.pageYOffset;

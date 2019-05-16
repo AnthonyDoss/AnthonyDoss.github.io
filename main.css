@@ -14,7 +14,7 @@
   --ff-ss: 'Poppins', sans-serif;
   --ff-sss: 'Cinzel Decorative', cursive;
   --fw-n: 400;
-  --fw-b: 900;
+  --fw-b: 600;
 }
 
 .html {
@@ -35,10 +35,11 @@ img {
   z-index: 1;
   top: 0;
   left: 0;
-  background-color: #111;
+  background-color:black;
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 60px;
+  opacity: 0.77;
 }
 
 .sidenav a {
@@ -68,6 +69,7 @@ img {
   width: 100%;
   display: block;
   transition: top 0.3s;
+  z-index: 1;
 }
 
 #navbar a {
@@ -121,8 +123,8 @@ h2 {
 h1,
 h2,
 p {
-  margin-top: 0;
   margin-bottom: 1em;
+  margin-top: 0%;
 }
 
 h3 {
@@ -217,13 +219,12 @@ p {
   color: var(--white);
 }
 
-#myWork {
-  margin-top: 5em;
-  margin-bottom: 10em;
+#myWork{
   background-size: cover;
   background-position: center;
   align-items: center;
   justify-content: center;
+  margin: 5rem 3rem 10rem 3rem;
 }
 
 i {
@@ -257,28 +258,23 @@ i {
   border-radius: 20px;
 }
 
-.contact {
-  padding: 5em 0;
+.projects {
+  padding: 3em 0;
 }
 
-.contact h1 {
+.projects h1 {
   text-align: center;
 }
-
-input,
-textarea {
-  display: block;
-  box-sizing: border-box;
-  padding: 1em;
-  width: 50%;
-  background: var(--light-gray);
-  border: none;
-  font-size: 1.2rem;
-  border-radius: 20px;
+.projects h2 {
+  margin-top: 0%;
 }
-
-textarea {
-  height: 20vh;
+#proj1{
+  position: relative;
+  transition: top ease 0.5s;
+  top: 0;
+}
+#proj1:hover{
+  top: -10px;
 }
 
 .btn3 {
@@ -304,4 +300,8 @@ footer {
 
 footer i {
   margin: 0.5em;
+}
+.columns{
+  margin-right:0.1rem;
+  margin-left: 0.1rem;
 }
