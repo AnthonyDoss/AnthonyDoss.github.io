@@ -34,9 +34,9 @@ copyrights Anthonydoss.
      </div>
     <!--SideBar-->
     <div id="mySidenav" class="sidenav">
-        <a href="#aboutme">About</a>
-        <a href="#mywork">Work</a>
-        <a href="#projects">Projects</a>
+        <a href="#aboutme"onclick="closeNav()">About</a>
+        <a href="#mywork" onclick="closeNav()">Work</a>
+        <a href="#projects"onclick="closeNav()">Projects</a>
       </div>
     <!--About me-->
     <section class="about_me" id="aboutme">
@@ -82,17 +82,18 @@ copyrights Anthonydoss.
                   <div class="tile is-child box" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal ">
                     <p class="title"><h2><i class="fas fa-code"></i>Skills</h2></p>
                     <p><div>
-                            <p class="btn2"> Java</p>
+                            <p class="btn2">Java</p>
                             <p class="btn2">JavaScript</p>
                             <p class="btn2">React</p>
+                            <p class="btn2">Node.js</p>
                             <p class="btn2">HTML/CSS</p>
                             <p class="btn2">PHP</p>
                             <p class="btn2">MySQL</p>
                             <p class="btn2">Microsoft SQL Server</p>
-                            <p class="btn2">Microsoft Office Suite</p>
-                            <p class="btn2">GNS3</p>
+                            <p class="btn2">Microsoft Office</p>
+                            <p class="btn2">Git</p>
                             <p class="btn2">Windows 10, Linux/Unix</p>
-                            <p class="btn2">Project Management</p>
+                            
                         </div></p>
                   </div>
                 </div>
@@ -162,8 +163,11 @@ copyrights Anthonydoss.
       <div class="tile is-9" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal">
         <div class="tile is-parent"  id="proj1">
             <div class="tile is-child box">
-                <h2>Coming Soon</h2>
-                <h3></h3>
+                <h2>SQL Database</h2>
+                <p><a href="https://github.com/AnthonyDoss/WebsiteDataBase" target="_blank"><i class="fab fa-github  fa-2x"></i></a><p>
+                <h3>Database scripts designed to create and sort information 
+                  for a given website wire frames as a school project.</h3><br>
+                  <p class="btn2">SQL</p>
             </div>
         </div>
         <div class="tile is-parent"  id="proj1">
@@ -197,20 +201,31 @@ copyrights Anthonydoss.
  //sideNav open function 
 function openNav() {
   document.getElementById("mySidenav").style.width = "250px";
+  //document.getElementById("brgMenu").style.display='none';
 }
 //sideNav close function 
 function closeNav() {
   document.getElementById("mySidenav").style.width = "0";
-  
+  //document.getElementById("brgMenu").style.display='block';
 }
-//sideNav Handler function 
+
 function navHandler(){
-    if (document.getElementById("mySidenav").style.width == "250px"){
-      closeNav();
-    }
-    else openNav();
-    document.getElementById("brgMenu").classList.toggle('fa-times')
+  if(document.getElementById("mySidenav").style.width != "250px"){
+    openNav();
   }
+  else
+  closeNav();
+  }
+
+
+document.body.addEventListener("dblclick", function(){
+  if(document.getElementById("mySidenav").style.width == "250px"){
+    closeNav();
+  }else
+  return; 
+ });
+
+
 //scroll handler for burger menu icon
 var prevScrollpos = window.pageYOffset;
 window.onscroll = function() {
