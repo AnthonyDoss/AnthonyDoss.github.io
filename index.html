@@ -1,257 +1,278 @@
-<!--
-Name: Anthony Doss
-ID: 991532603
-Date Created: February 25, 2019
-Description: Portfolio website.
-copyrights Anthonydoss.
--->
-
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Anthony Doss</title>
-    <link rel="stylesheet" href="https://anijs.github.io/lib/anicollection/anicollection.css">
-    <link rel="icon" type="image/jpg" href="images/logo.png" />
-    <link rel="stylesheet" href="reset.css"/>
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/"
-        crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
-    <link rel="stylesheet" href="main.css" />
+    <link rel="icon" type="image/png" href="images/logo.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
 </head>
-
 <body>
-    <!--Welcome Section-->
-    <div class="welcome">
-     <h1>Welcome to my <span>Portfolio</span></h1>
+
+    <!-- NAV -->
+    <nav class="nav" id="nav">
+        <a href="#hero" class="nav-name">Anthony Doss</a>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+        </ul>
+        <button class="nav-burger" id="nav-burger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- MOBILE NAV -->
+    <div class="mobile-nav" id="mobile-nav">
+        <a href="#about" class="mobile-nav-link">About</a>
+        <a href="#experience" class="mobile-nav-link">Experience</a>
+        <a href="#skills" class="mobile-nav-link">Skills</a>
+        <a href="#projects" class="mobile-nav-link">Projects</a>
     </div>
-    <!--NavBar-->
-    <div id="navbar">
-        <a href="#home"><span onclick="navHandler()" class="menu"><i id="brgMenu" class="fas fa-bars fa-2x" style="color:#D5DBD8"></i></span></a>
-     </div>
-    <!--SideBar-->
-    <div id="mySidenav" class="sidenav">
-        <a href="#aboutme"onclick="closeNav()">About</a>
-        <a href="#mywork" onclick="closeNav()">Work</a>
-        <a href="#projects"onclick="closeNav()">Projects</a>
-      </div>
-    <!--About me-->
-    <section class="about_me" id="aboutme">
-        <img src="images/aboutme.1.jpg" alt="plane picture" class="about-picture">
-        <h1 class="about-title">Anthony's Portfolio</h1>
-        <h2 class="about-subtitle">About Me</h2>
-        <div class="about-text" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal ">
-            <p> Highly analytical, organized, and reliable professional with a comprehensive background
-                in the information technology field, complemented by experience in customer service and general management. 
-                I bring a wealth of knowledge acquired through experience and academic background, including strong data engineering and software development skills.
-                Equipped with leadership aptitudes, I ensure high-quality performance and timely completion of responsibilities in delegating and facilitating within a group. 
-                Additionally, I have expertise in technical writing and oral presentation,
-                with a proficiency in systematically gathering and evaluating pertinent information to adapt to new equipment and technologies.
-            </p>
+
+    <!-- HERO -->
+    <section class="hero" id="hero">
+        <div class="hero-left">
+            <h1 class="hero-name">
+                <span>Anthony</span>
+                <span>Doss</span>
+            </h1>
+        </div>
+        <div class="hero-right">
+            <p class="hero-role">Data Engineer &amp;<br>Software Developer</p>
+            <p class="hero-meta">Toronto, ON</p>
+            <div class="hero-ctas">
+                <a href="https://github.com/AnthonyDoss" target="_blank" class="cta-link">GitHub →</a>
+                <a href="https://www.linkedin.com/in/anthony-doss-4550a312a/" target="_blank" class="cta-link">LinkedIn →</a>
+            </div>
         </div>
     </section>
-         <!--My Experience Section-->
-    <section class="section-padding" id="mywork">
-        <h1 class="exp-title">My Experience</h1>
-        <div class="columns is-centered">
-                <div class="tile is-3 is-vertical is-parent">
-                  <div class="tile is-child box" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal">
-                    <p class="title"><h2><i class="fas fa-graduation-cap"></i>Education</h2></p>
-                    <p> 
-                        <h3 class=" is-size-5 has-text-grey-darker">Sheridan College-(2021)</h3>
-                        <h5>Computer Systems Technology – Systems Analyst</h5>
-                        <h3 class="is-size-5 has-text-grey-darker">Ryerson University-(2017)</h3>
-                        <h5>B.Eng. Aerospace Engineering</h5>
-                    </p>
-                  </div>
-                  <div class="tile is-child box" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal ">
-                        <p class="title"><h2><i class="fas fa-link"></i>Web Links</h2></p>
-                        <p><a href="https://www.linkedin.com/in/anthony-doss-4550a312a/" target="_blank" class="btn"><i class="fab fa-linkedin"></i>
-                            Linkedin</a>
-                        <a href="https://github.com/AnthonyDoss" target="_blank" class="btn"><i class="fab fa-github"></i> Github</a></p>
-                  </div>
-                  <div class="tile is-child box" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal ">
-                    <p class="title"><h2><i class="fas fa-code"></i>Skills</h2></p>
-                    <p><div>
-                            <p class="btn2">Java</p>
-                            <p class="btn2">JavaScript</p>
-                            <p class="btn2">C#/.Net</p>
-                            <p class="btn2">Python</p>
-                            <p class="btn2">HTML/CSS</p>
-                            <p class="btn2">Restful API’s</p>
-                            <p class="btn2">SQL(MySQL,Oracle)</p>
-                            <p class="btn2">Microsoft Azure</p>
-                            <p class="btn2">Microsoft Office</p>
-                            <p class="btn2">Git/Gitlab</p>
-                            <p class="btn2">Windows 10, Linux/Unix</p>
-                            
-                        </div></p>
-                  </div>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+        <div class="container">
+            <h2 class="section-label">About</h2>
+            <div class="about-grid">
+                <p class="about-text">
+                    Data engineer and software developer with a track record of building systems that process, transform, and deliver data at scale.
+                    I hold a diploma in Computer Systems Technology from Sheridan College and a B.Eng. in Aerospace Engineering from Ryerson University —
+                    a combination that gives me both the technical depth and analytical rigour to solve complex problems.
+                    I specialise in turning messy pipelines into reliable infrastructure and translating business requirements into clean, maintainable software.
+                </p>
+                <div class="about-edu">
+                    <div class="edu-item">
+                        <h3>Sheridan College</h3>
+                        <p>Computer Systems Technology — 2021</p>
+                    </div>
+                    <div class="edu-item">
+                        <h3>Ryerson University</h3>
+                        <p>B.Eng. Aerospace Engineering — 2017</p>
+                    </div>
                 </div>
-                <div class="tile is-parent is-6" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal ">
-                  <div class="tile is-child box">
-                    <p class="title"></p><h2><i class="fas fa-briefcase"></i>Work</h2></p>
-                    <p></p>
-                    <div class="content">
-                          <h3 class="is-size-5">Data Engineer, Greenfield Global (Sep 2023 - Present)</h3>
-                            <ul>
-                              <li>Engineered an advanced departmental IT dashboard using Power BI, SQL, Databricks, and Azure Data Factory (ADF), seamlessly aggregating data from over 20 sources. Skillfully refining a daily influx of 20,000+ data points, this dynamic solution empowers upper management to effectively track and forecast the team’s key performance indicators (KPIs) and overall department performance trends.</li>
-                              <li>Collaborated with business analysts and data scientists to develop and deliver a diverse set of reports utilizing various data types. Demonstrated expertise in SQL, Power BI, Databricks, and Azure Data Factory. Applied advanced data processing and transformation techniques across a range of datasets, enhancing accuracy and reliability.</li>
-                              <li>Implemented a streamlined solution by leveraging Power Apps and Azure APIs to automate an alerting service. This service promptly notifies the relevant teams whenever there are failures or errors in an ETL pipeline. This proactive approach not only significantly saved time for the company but also ensured swift response and resolution to any issues in the data processing workflows.</li>
-                              <li>Enhanced data governance through the development of an automated data dictionary report. This initiative streamlined understanding across business teams, mitigated duplicate data set creation, and resulted in substantial resource savings.</li>
-                            </ul>
-                        
-                          <h3 class="is-size-5">Senior Software Developer, RBC (Dec 2022 - Sep 2023)</h3>
-                          <ul>
-                              <li>Architected a robust C file watcher application, adept at monitoring and tracking 1000+ daily files, seamlessly producing tailored reports integrated with Power BI and SQL. This innovation not only slashed the support team’s workload by over 50% but also streamlined the debugging of sensitive data, effectively addressing complexity and compliance challenges.</li>
-                              <li>Developed and implemented an automated data quality framework, integrating validation scripts into the ETL pipeline for continuous monitoring. This initiative resulted in a 25% reduction in data-related errors, ensuring a high-quality, reliable data set for improved reporting and analysis.</li>
-                              <li>Designed and developed highly efficient automation software using C#, resulting in a saving of over 100 hours of manual code deployment and eliminating all human errors.</li>
-                              <li>Efficiently updated, documented, troubleshot, and maintained middleware software for various API applications in coordination with development and client deadlines.</li>
-                         </ul>
+            </div>
+        </div>
+    </section>
 
-                        
-                            <h3 class="is-size-5">Data Engineer, ETL Developer,Statistics Canada(Feb 2022 - Dec 2022)</h3>
-                           <ul>
-                              <li>Developed data transformation code in ETL pipelines to integrate data into Azure data warehouse for consumption by the data analyst clients through Power BI.</li>
-                              <li>Improved database extraction performance by over 40% by researching and implementing efficient database extraction methods.</li>
-                              <li>Designed and Developed Azure data warehouse architecture to streamline and simplify the data transformation and data loading process, which decreased the amount of storage used.</li>
-                              <li>Automated the ETL process using C#, Scala, and PySpark scripts, reducing the processing time from 5 hours to just 10 minutes.</li>
-                            </ul>
+    <!-- EXPERIENCE -->
+    <section class="section" id="experience">
+        <div class="container">
+            <h2 class="section-label">Experience</h2>
+            <div class="exp-list">
 
-                            <h3 class="is-size-5">Programmer Analyst, Application Development,Statistics Canada (Jan 2020 - Feb 2022)</h3>
-                            <ul>
-                                <li>Developed, implemented, and maintained over 20 web scraping applications for different clients collecting over 2TB of
-                                    data weekly using C#, Selenium, and Restful API’s implementing advanced knowledge of Data‑Structures and Algorithms
-                                    to improve code efficiency and runtime for various projects, greatly increasing performance.
-                                </li>
-                                <li>Developed, implemented, and maintained a data validation software that was used by clients to validate over 400M rows
-                                of data on a weekly basis to ensure data quality is up to a given standard.
-                                </li>
-                                <li>Successfully managed multiple automation projects through their SDLC life cycles using CA Automic, Windows Task
-                                Scheduler, and Bash scripts.
-                                </li>
-                            </ul>
-                         </p>
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-role">Data Engineer</span>
+                            <span class="exp-company">Greenfield Global</span>
                         </div>
-                  </div>
+                        <span class="exp-date">Sep 2023 — Present</span>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Engineered an IT dashboard using Power BI, SQL, Databricks, and Azure Data Factory, aggregating 20+ data sources and refining 20,000+ daily data points to track team KPIs for upper management.</li>
+                        <li>Developed reports for business analysts and data scientists using advanced SQL, Power BI, and Databricks transformations to enhance accuracy and reliability across datasets.</li>
+                        <li>Automated an ETL failure alerting service via Power Apps and Azure APIs, proactively notifying teams of pipeline errors and saving significant operational time.</li>
+                        <li>Built an automated data dictionary report to improve data governance, reduce duplicate dataset creation, and cut resource overhead across business teams.</li>
+                    </ul>
                 </div>
-              </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-role">Senior Software Developer</span>
+                            <span class="exp-company">RBC</span>
+                        </div>
+                        <span class="exp-date">Dec 2022 — Sep 2023</span>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Architected a C# file watcher monitoring 1,000+ daily files with Power BI and SQL reporting integration, cutting support team workload by over 50%.</li>
+                        <li>Implemented an automated data quality framework within the ETL pipeline, reducing data-related errors by 25%.</li>
+                        <li>Designed automation software in C# that saved 100+ hours of manual code deployment and eliminated all human errors in the deployment process.</li>
+                        <li>Maintained and updated middleware software for API applications in coordination with development and client deadlines.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-role">Data Engineer / ETL Developer</span>
+                            <span class="exp-company">Statistics Canada</span>
+                        </div>
+                        <span class="exp-date">Feb 2022 — Dec 2022</span>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Built ETL pipeline transformation code integrating data into an Azure data warehouse for Power BI consumption by data analyst clients.</li>
+                        <li>Improved database extraction performance by 40%+ through research and implementation of efficient extraction strategies.</li>
+                        <li>Automated the full ETL process using C#, Scala, and PySpark — reducing processing time from 5 hours to 10 minutes.</li>
+                    </ul>
+                </div>
+
+                <div class="exp-item">
+                    <div class="exp-header">
+                        <div>
+                            <span class="exp-role">Programmer Analyst</span>
+                            <span class="exp-company">Statistics Canada</span>
+                        </div>
+                        <span class="exp-date">Jan 2020 — Feb 2022</span>
+                    </div>
+                    <ul class="exp-bullets">
+                        <li>Developed and maintained 20+ web scraping applications collecting 2TB+ of data weekly using C#, Selenium, and RESTful APIs.</li>
+                        <li>Built data validation software used by clients to validate 400M+ rows of data weekly to ensure quality standards.</li>
+                        <li>Managed multiple automation projects through full SDLC cycles using CA Automic, Windows Task Scheduler, and Bash scripts.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
     </section>
-    
-        <!--Project Section-->
-        <center>
-    <section class="projects" id="projects">
-        <h1>Projects</h1>
-        <div class="tile is-9" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal"> 
-          <div class="tile is-parent" id="proj1">
-              <div class="tile is-child box" >
-                 <h2>StoreBolt</h2>
-                 <p><a href="https://github.com/AnthonyDoss/StoreBolt" target="_blank"><i class="fab fa-github  fa-2x"></i></a><p>
-                 <h3>Java FXML application designed to allow users to pay for items they are going to purchase via the app. 
-                   This eliminates the need to stand in line to purchase items and helps reduce time for the consumer.</h3><br>
-                   <p class="btn2"> Java</p>
-                   <p class="btn2"> Java FXML</p>
-              </div>
-          </div>
-          <div class="tile is-parent"  id="proj1">
-              <div class="tile is-child box">
-                <h2>React Todo-list</h2>
-                 <p><a href="https://github.com/AnthonyDoss/Todo-list" target="_blank"><i class="fab fa-github  fa-2x"></i></a><a href="https://doss-todolist.netlify.com/" target="_blank"><i class="fas fa-external-link-alt  fa-2x"></i></a></p>
-                 <h3> A simple React todo-list application </h3><br>
-                   <p class="btn2"> Javascript</p>
-                   <p class="btn2"> React</p>                
-              </div>
-          </div>
-          <div class="tile is-parent"  id="proj1">
-              <div class="tile is-child box">
-                  <h2>Trivia Game</h2>
-                   <p><a href="https://github.com/AnthonyDoss/TriviaGame/tree/master/trivia%20Game" target="_blank"><i class="fab fa-github  fa-2x"></i></a><a href="http://dossan.dev.fast.sheridanc.on.ca/SYST10199/Assign1_AnthonyDoss/Assignment1.html" target="_blank"><i class="fas fa-external-link-alt  fa-2x"></i></a></p>
-                  <h3>JavaScript Trivia Game.</h3><br>
-                  <p class="btn2"> Javascript</p>
-                   <p class="btn2"> HTML & CSS</p>
-              </div>
-          </div>
-      </div>
-      <div class="tile is-9" data-anijs="if: scroll, on: window, do: fadeInUp animated, before: $scrollReveal">
-        <div class="tile is-parent"  id="proj1">
-            <div class="tile is-child box">
-                <h2>SQL Database</h2>
-                <p><a href="https://github.com/AnthonyDoss/WebsiteDataBase" target="_blank"><i class="fab fa-github  fa-2x"></i></a><p>
-                <h3>Database scripts designed to create and sort information 
-                  for a given website wire frames as a school project.</h3><br>
-                  <p class="btn2">SQL</p>
+
+    <!-- SKILLS -->
+    <section class="section" id="skills">
+        <div class="container">
+            <h2 class="section-label">Skills</h2>
+            <div class="skills-columns">
+                <div class="skill-col">
+                    <p class="skill-col-label">Languages</p>
+                    <ul>
+                        <li>Java</li>
+                        <li>JavaScript</li>
+                        <li>Python</li>
+                        <li>C# / .NET</li>
+                        <li>SQL</li>
+                        <li>Scala</li>
+                        <li>HTML / CSS</li>
+                    </ul>
+                </div>
+                <div class="skill-col">
+                    <p class="skill-col-label">Cloud &amp; Data</p>
+                    <ul>
+                        <li>Microsoft Azure</li>
+                        <li>Azure Data Factory</li>
+                        <li>Databricks</li>
+                        <li>Power BI</li>
+                        <li>PySpark</li>
+                        <li>ETL / ELT</li>
+                        <li>MySQL / Oracle</li>
+                    </ul>
+                </div>
+                <div class="skill-col">
+                    <p class="skill-col-label">Tools &amp; Frameworks</p>
+                    <ul>
+                        <li>React</li>
+                        <li>RESTful APIs</li>
+                        <li>Power Apps</li>
+                        <li>Selenium</li>
+                        <li>Git / GitLab</li>
+                        <li>Linux / Unix</li>
+                        <li>CA Automic</li>
+                    </ul>
+                </div>
             </div>
         </div>
-        <div class="tile is-parent"  id="proj1">
-            <div class="tile is-child box">
-                <h2>Coming Soon</h2>
-                <h3></h3>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section" id="projects">
+        <div class="container">
+            <h2 class="section-label">Projects</h2>
+            <div class="proj-grid">
+
+                <div class="proj-item">
+                    <h3>StoreBolt</h3>
+                    <p class="proj-stack">Java · FXML</p>
+                    <p class="proj-desc">A Java FXML app letting users pay for items in-app before reaching checkout — eliminating queues and reducing wait time.</p>
+                    <div class="proj-links">
+                        <a href="https://github.com/AnthonyDoss/StoreBolt" target="_blank" class="proj-link">GitHub →</a>
+                    </div>
+                </div>
+
+                <div class="proj-item">
+                    <h3>React Todo-list</h3>
+                    <p class="proj-stack">JavaScript · React</p>
+                    <p class="proj-desc">A clean, functional React task management application.</p>
+                    <div class="proj-links">
+                        <a href="https://github.com/AnthonyDoss/Todo-list" target="_blank" class="proj-link">GitHub →</a>
+                        <a href="https://doss-todolist.netlify.com/" target="_blank" class="proj-link">Live →</a>
+                    </div>
+                </div>
+
+                <div class="proj-item">
+                    <h3>Trivia Game</h3>
+                    <p class="proj-stack">JavaScript · HTML / CSS</p>
+                    <p class="proj-desc">An interactive trivia game with dynamic question rendering and score tracking.</p>
+                    <div class="proj-links">
+                        <a href="https://github.com/AnthonyDoss/TriviaGame/tree/master/trivia%20Game" target="_blank" class="proj-link">GitHub →</a>
+                    </div>
+                </div>
+
+                <div class="proj-item">
+                    <h3>SQL Database</h3>
+                    <p class="proj-stack">SQL</p>
+                    <p class="proj-desc">Database scripts to create and manage structured data for a web application — schema design, queries, and data sorting.</p>
+                    <div class="proj-links">
+                        <a href="https://github.com/AnthonyDoss/WebsiteDataBase" target="_blank" class="proj-link">GitHub →</a>
+                    </div>
+                </div>
+
             </div>
         </div>
-        <div class="tile is-parent"  id="proj1">
-            <div class="tile is-child box">
-                <h2>Coming Soon</h2>
-                <h3></h3>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-inner">
+            <div class="footer-links">
+                <a href="https://github.com/AnthonyDoss" target="_blank" class="footer-link">GitHub</a>
+                <a href="https://www.linkedin.com/in/anthony-doss-4550a312a/" target="_blank" class="footer-link">LinkedIn</a>
+                <a href="mailto:dossan@sheridancollege.ca" class="footer-link">Email</a>
             </div>
+            <p class="footer-copy">© 2026 Anthony Doss</p>
         </div>
-    </div>
-    </section></center>
-    <!--Footer-->
-    <footer>
-            <a href="https://github.com/AnthonyDoss" target="_blank"><i class="fab fa-github-square fa-3x"></i></a>
-            <a href="https://www.linkedin.com/in/anthony-doss-4550a312a/" target="_blank"><i class="fab fa-linkedin fa-3x"></i></a>
-            <a href = "mailto: dossan@sheridancollege.ca"><i class="far fa-envelope fa-3x"></i></a>
-            <p>Copyright 2019 Anthony Doss Portfolio &copy;</p>
-            <p>Email:  dossan@sheridancollege.ca</p>
     </footer>
 
-  <!--Anijs for animation -->
-<script src="https://anijs.github.io/lib/anijs/anijs.js"></script>
-<script src="https://anijs.github.io/lib/anijs/helpers/scrollreveal/anijs-helper-scrollreveal.js"></script>
-<!--Navbar js-->
-<script>
- //sideNav open function 
-function openNav() {
-  document.getElementById("mySidenav").style.width = "250px";
-  //document.getElementById("brgMenu").style.display='none';
-}
-//sideNav close function 
-function closeNav() {
-  document.getElementById("mySidenav").style.width = "0";
-  //document.getElementById("brgMenu").style.display='block';
-}
+    <script>
+        const burger = document.getElementById('nav-burger');
+        const mobileNav = document.getElementById('mobile-nav');
 
-function navHandler(){
-  if(document.getElementById("mySidenav").style.width != "250px"){
-    openNav();
-  }
-  else
-  closeNav();
-  }
+        burger.addEventListener('click', () => {
+            mobileNav.classList.toggle('open');
+            burger.classList.toggle('open');
+        });
 
+        document.querySelectorAll('.mobile-nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileNav.classList.remove('open');
+                burger.classList.remove('open');
+            });
+        });
 
-document.body.addEventListener("dblclick", function(){
-  if(document.getElementById("mySidenav").style.width == "250px"){
-    closeNav();
-  }else
-  return; 
- });
-
-
-//scroll handler for burger menu icon
-var prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-var currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.getElementById("navbar").style.top = "0";
-  } else {
-    document.getElementById("navbar").style.top = "-55px";
-  }
-  prevScrollpos = currentScrollPos;
-}
-</script>
+        const nav = document.getElementById('nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 50);
+        });
+    </script>
 </body>
 </html>
