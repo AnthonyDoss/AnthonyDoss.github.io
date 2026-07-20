@@ -302,7 +302,7 @@ body {
 /* ── Skills ───────────────────────────────────── */
 .skills-columns {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     border-top: 1px solid var(--divider);
 }
 
@@ -311,7 +311,8 @@ body {
     border-right: 1px solid var(--divider);
 }
 
-.skill-col:nth-child(2) { padding: 0 48px; }
+.skill-col:nth-child(2),
+.skill-col:nth-child(3) { padding: 0 48px; }
 
 .skill-col:last-child {
     padding-left: 48px;
@@ -391,6 +392,23 @@ body {
 }
 
 .proj-link:hover { opacity: 0.45; }
+
+/* ── Certifications ───────────────────────────── */
+.cert-list {
+    list-style: none;
+    padding: 0;
+    border-top: 1px solid var(--divider);
+    padding-top: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cert-list li {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--black);
+}
 
 /* ── Footer ───────────────────────────────────── */
 .footer { padding: 48px 0; }
